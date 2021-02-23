@@ -1,3 +1,6 @@
+#ifndef EXPRPAR_H
+#define EXPRPAR_H
+
 #include "expr.h"
 
 class ExprPar : public Expr
@@ -10,3 +13,5 @@ class ExprPar : public Expr
     private:
         Expr *e;
 };
+
+#endif //EXPRPAR_H

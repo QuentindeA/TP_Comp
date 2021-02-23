@@ -1,13 +1,12 @@
-#include <string>
+#ifndef E2_H
+#define E2_H
 
-#include "symbole.h"
-#include "automate.h"
-
+#include "etat.h"
 class E2 : public Etat {
     public:
-        E2(string name) : Etat(name) { };
+        E2() : Etat("E2") { };
         virtual ~E2() { };
-
-    private:
-        /* data */
+        virtual bool transition(Automate & automate, Symbole * s);
 };
+
+#endif //E2_H

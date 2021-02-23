@@ -1,7 +1,9 @@
-#pragma once
+#ifndef LEXER_H
+#define LEXER_H
 
 #include <string>
 #include "symbole.h"
+
 using namespace std;
 
 class Lexer {
@@ -18,3 +20,5 @@ class Lexer {
       int tete;
       Symbole * tampon;
 };
+
+#endif //LEXER_H

@@ -1,4 +1,5 @@
 #include "e8.h"
+#include "exprMult.h"
 
 bool E8::transition(Automate &automate, Symbole *s)
 {
@@ -14,7 +15,7 @@ bool E8::transition(Automate &automate, Symbole *s)
             automate.reduction(3, new ExprMult(s2, s1));
             break;
         default : 
-            std::cout << "Erreur transition pour " << this.name;
+            std::cout << "Erreur transition pour " << name;
     }
     return false;
 }

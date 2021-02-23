@@ -1,13 +1,14 @@
-#include <string>
+#ifndef E3_H
+#define E3_H
 
 #include "symbole.h"
 #include "automate.h"
 
 class E3 : public Etat {
     public:
-        E3(string name) : Etat(name) { };
+        E3() : Etat("E3") { };
         virtual ~E3() { };
-
-    private:
-        /* data */
+        virtual bool transition(Automate & automate, Symbole * s);
 };
+
+#endif //E3_H

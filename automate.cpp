@@ -1,9 +1,11 @@
 #include "automate.h"
+#include "e0.h"
 
-Automate::Automate()
-{
-    symbolstack = new vector<Symbole>;
-    statestack = new vector<Etat>;
+int Automate::Eval() {
+    if (exprFinale != nullptr)
+        return exprFinale->eval();
+    std::cout << "Pas d'expression finale, erreur lors du parsage ou faire start avant..." << std::endl;
+    return 0;
 }
 
 void Automate::Start(){
@@ -35,12 +37,15 @@ void Automate::reduction(int n, Symbole *s)
 
 void Automate::Accept() 
 {
-    std::cout << symbolStack.pop_back();
+    //std::cout << symbolstack.back();
+    exprFinale = (Expr *)symbolstack.back();
 }
 
-Symbole Automate::popSymbol()
+Symbole * Automate::popSymbol()
 {
-    return symbolStack.pop_back();
+    Symbole * s = symbolstack.back();
+    symbolstack.pop_back();
+    return s;
 }
 
 void Automate::popAndDestroySymbol()

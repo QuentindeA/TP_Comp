@@ -1,4 +1,8 @@
+#ifndef ETAT_H
+#define ETAT_H
+
 #include <string>
+#include <iostream>
 
 #include "automate.h"
 #include "symbole.h"
@@ -13,3 +17,5 @@ class Etat {
     protected:
         string name;
 };
+
+#endif //ETAT_H

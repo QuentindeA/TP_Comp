@@ -17,7 +17,7 @@ bool E5::transition(Automate &automate, Symbole *s)
             automate.decalage(s, new E8);
             break;
         default : 
-            std::cout << "Erreur transition pour " << this.name;
+            std::cout << "Erreur transition pour " << name;
     }
     return false;
 }

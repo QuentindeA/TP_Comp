@@ -1,4 +1,7 @@
 #include "e0.h"
+#include "e1.h"
+#include "e2.h"
+#include "e3.h"
 
 bool E0::transition(Automate &automate, Symbole *s)
 {
@@ -14,7 +17,7 @@ bool E0::transition(Automate &automate, Symbole *s)
             automate.decalage(s, new E1);
             break;
         default : 
-            std::cout << "Erreur transition pour " << this.name;
+            std::cout << "Erreur transition pour " << name;
     }
     return false;
 }

@@ -1,3 +1,6 @@
+#ifndef EXPRPLUS_H
+#define EXPRPLUS_H
+
 #include "symbole.h"
 #include "expr.h"
 
@@ -12,3 +15,5 @@ class ExprPlus : public Expr
         Expr *s1;
         Expr *s2;
 };
+
+#endif //EXPRPLUS_H

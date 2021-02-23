@@ -1,3 +1,6 @@
+#ifndef EXPRVAL_H
+#define EXPRVAL_H
+
 #include "expr.h"
 #include "entier.h"
 
@@ -11,3 +14,5 @@ class ExprVal : public Expr
     private:
         Entier *e;
 };
+
+#endif //EXPRVAL_H

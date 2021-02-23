@@ -1,3 +1,6 @@
+#ifndef EXPRMULT_H
+#define EXPRMULT_H
+
 #include "symbole.h"
 #include "expr.h"
 
@@ -12,3 +15,5 @@ class ExprMult : public Expr
         Expr *s1;
         Expr *s2;
 };
+
+#endif //EXPRMULT_H

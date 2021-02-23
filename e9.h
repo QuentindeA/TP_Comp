@@ -1,13 +1,14 @@
-#include <string>
+#ifndef E9_H
+#define E9_H
 
 #include "symbole.h"
 #include "automate.h"
 
 class E9 : public Etat {
     public:
-        E9(string name) : Etat(name) { };
+        E9() : Etat("E9") { };
         virtual ~E9() { };
-
-    private:
-        /* data */
+        virtual bool transition(Automate & automate, Symbole * s);
 };
+
+#endif //E9_H

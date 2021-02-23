@@ -1,4 +1,6 @@
 #include "e1.h"
+#include "e4.h"
+#include "e5.h"
 
 bool E1::transition(Automate &automate, Symbole *s)
 {
@@ -14,7 +16,7 @@ bool E1::transition(Automate &automate, Symbole *s)
             automate.Accept();
             break;
         default : 
-            std::cout << "Erreur transition pour " << this.name;
+            std::cout << "Erreur transition pour " << name;
     }
     return false;
 }

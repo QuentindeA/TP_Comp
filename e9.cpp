@@ -1,4 +1,5 @@
 #include "e9.h"
+#include "exprPar.h"
 
 bool E9::transition(Automate &automate, Symbole *s)
 {
@@ -14,7 +15,7 @@ bool E9::transition(Automate &automate, Symbole *s)
             automate.reduction(3, new ExprPar(s1));
             break;
         default : 
-            std::cout << "Erreur transition pour " << this.name;
+            std::cout << "Erreur transition pour " << name;
     }
     return false;
 }

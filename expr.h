@@ -1,3 +1,6 @@
+#ifndef SYMBOLE_H
+#define SYMBOLE_H
+
 #include "symbole.h"
 
 class Expr : public Symbole
@@ -8,3 +11,5 @@ class Expr : public Symbole
       //virtual double eval(const map<string, double> & valeurs) = 0;
       virtual int eval() = 0; //Pas besoin de paramètre, on a pas de variable & "=0" Permet d'avoir une classe abstraite
 };
+
+#endif //SYMBOLE_H

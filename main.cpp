@@ -13,5 +13,7 @@ int main(void) {
 
    automate.Start();
 
+   std::cout << "Le résultat est : " << automate.Eval();
+
    return 0;
 }

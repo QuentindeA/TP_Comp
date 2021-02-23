@@ -1,18 +1,19 @@
 #include "e3.h"
+#include "exprVal.h"
 
 bool E3::transition(Automate &automate, Symbole *s)
 {
     switch (*s)
     {
     case PLUS:
-    case FOIS:
+    case MULT:
     case CLOSEPAR:
     case FIN:
-        Expr *s1 = (Expr *)automate.popSymbol();
-        automate.reduction(1, new ExprVal(s1));
+        Entier *e = (Entier *)automate.popSymbol();
+        automate.reduction(1, new ExprVal(e));
         break;
     default:
-        std::cout << "Erreur transition pour " << this.name;
+        std::cout << "Erreur transition pour " << name;
     }
     return false;
 }
