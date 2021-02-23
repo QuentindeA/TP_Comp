@@ -4,25 +4,24 @@ Symbole * Lexer::Consulter() {
    if (!tampon) {
 
       if (tete==flux.length())
-         tampon = new Symbole(FIN);
+         tampon = new Symbole(FIN, true);
       else
       {
-
          switch (flux[tete]) {
             case '(':
-               tampon = new Symbole(OPENPAR);
+               tampon = new Symbole(OPENPAR, true);
                tete++;
                break;
             case ')':
-               tampon = new Symbole(CLOSEPAR);
+               tampon = new Symbole(CLOSEPAR, true);
                tete++;
                break;
             case '*':
-               tampon = new Symbole(MULT);
+               tampon = new Symbole(MULT, true);
                tete++;
                break;
             case '+':
-               tampon = new Symbole(PLUS);
+               tampon = new Symbole(PLUS, true);
                tete++;
                break;
             default:
@@ -34,10 +33,10 @@ Symbole * Lexer::Consulter() {
                      i++;
                   }
                   tete = tete+i;
-                  tampon = new Entier(resultat);
+                  tampon = new Entier(resultat, true);
                }
                else {
-                  tampon = new Symbole(ERREUR);
+                  tampon = new Symbole(ERREUR, true);
                }
          }
       }
@@ -48,4 +47,3 @@ Symbole * Lexer::Consulter() {
 void Lexer::Avancer() {
    tampon = nullptr;
 }
-
