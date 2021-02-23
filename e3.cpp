@@ -9,7 +9,7 @@ bool E3::transition(Automate &automate, Symbole *s)
     case CLOSEPAR:
     case FIN:
         Expr *s1 = (Expr *)automate.popSymbol();
-        automate.reduction(1, new Expr(s1));
+        automate.reduction(1, new ExprVal(s1));
         break;
     default:
         std::cout << "Erreur transition pour " << this.name;

@@ -1,5 +1,7 @@
-#include "symbole.h"
 #include <iostream>
+
+#include "symbole.h"
+#include "entier.h"
 
 void Symbole::Affiche() {
    cout<<Etiquettes[ident];
@@ -8,5 +10,9 @@ void Symbole::Affiche() {
 void Entier::Affiche() {
    Symbole::Affiche();
    cout<<"("<<valeur<<")";
+}
+
+int Entier::GetValeur() {
+   return valeur;
 }
 

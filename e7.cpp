@@ -11,7 +11,7 @@ bool E7::transition(Automate &automate, Symbole *s)
             Expr *s1 = (Expr *)automate.popSymbol();
             automate.popAndDestroySymbol();
             Expr *s2 = (Expr *)automate.popSymbol();
-            automate.reduction(3, newExprPlus(s2, s1));
+            automate.reduction(3, new ExprPlus(s2, s1));
             break;
         case MULT:
             automate.decalage(s, new E5);
