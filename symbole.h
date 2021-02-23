@@ -1,4 +1,5 @@
-#pragma once
+#ifndef SYMBOLE_H
+#define SYMBOLE_H
 
 #include <string>
 using namespace std;
@@ -12,7 +13,6 @@ class Symbole {
       Symbole(int i, bool t) : ident(i), terminal(t) {  }
       virtual ~Symbole() { }
       operator int() const { return ident; }
-      virtual void Affiche();
       bool isTerminal() { return terminal; }
       
    protected:
@@ -20,3 +20,4 @@ class Symbole {
       bool terminal;
 };
 
+#endif //SYMBOLE_H

@@ -1,5 +1,5 @@
-#ifndef SYMBOLE_H
-#define SYMBOLE_H
+#ifndef EXPR_H
+#define EXPR_H
 
 #include "symbole.h"
 
@@ -12,4 +12,4 @@ class Expr : public Symbole
       virtual int eval() = 0; //Pas besoin de paramètre, on a pas de variable & "=0" Permet d'avoir une classe abstraite
 };
 
-#endif //SYMBOLE_H
+#endif //EXPR_H

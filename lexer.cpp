@@ -1,4 +1,5 @@
 #include "lexer.h"
+#include "entier.h"
 
 Symbole * Lexer::Consulter() {
    if (!tampon) {
@@ -33,7 +34,7 @@ Symbole * Lexer::Consulter() {
                      i++;
                   }
                   tete = tete+i;
-                  tampon = new Entier(resultat, true);
+                  tampon = new Entier(resultat);
                }
                else {
                   tampon = new Symbole(ERREUR, true);

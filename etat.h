@@ -4,15 +4,16 @@
 #include <string>
 #include <iostream>
 
-#include "automate.h"
 #include "symbole.h"
+
+class Automate;
 
 class Etat {
     public:
-        Etat(string name);
-        virtual ~Etat();
-        void print() const;
+        Etat(string etatName) : name(etatName) {};
+        virtual ~Etat() {};
         virtual bool transition(Automate & automate, Symbole * s) = 0;
+        string getName();
         
     protected:
         string name;

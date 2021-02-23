@@ -2,6 +2,8 @@
 #define E1_H
 
 #include "etat.h"
+#include "automate.h"
+#include "symbole.h"
 
 class E1 : public Etat {
     public:
